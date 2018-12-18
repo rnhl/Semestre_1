@@ -1,0 +1,64 @@
+#lang racket
+
+(define L empty)
+(define L1 '())
+(cons 1 L)
+(define L2 (cons 1 L))
+
+
+(cons 2 L2)
+
+(list? 1)
+(list? 2)
+
+(first (list 1 2 3))
+
+(rest (list 1 2 3))
+
+(rest (list 1))
+
+(list 8 9 (list 1 2 3))
+
+
+(define (aotl l)
+  (if (empty? l) '()
+      (cons (+ (first l) 1)
+            (aotl (rest l))
+            )
+      )
+  )
+
+(define (renverse L)
+  (if (empty? L) '()
+      (append (renverse (rest L)) (list (first L))
+              )
+      )
+  )
+
+(define (double L)
+  (if (empty? L) '()
+      (cons (first L) (cons (first L) (double (rest L))))
+      )
+  )
+
+(define (doub L)
+  (cond ((empty? L) '() )
+     (append (append (list (first L)) (append (list (first L) (first L)))) (doub (rest L)))
+      (append (renverse (rest L)) (list (first L)))
+      )
+  )
+
+
+(define (triple L)
+  (if (empty? L) '()
+      (cons (first L) (cons (first L) (cons (first L) (triple (rest L)))))
+      )
+  )
+
+(define (triple_list L)
+  (if (empty? L) '()
+      (append (list (first L) (first L) (first L)) (triple_list (rest L)))
+      )
+  )
+
+;; list* >> (list* (first L) (first L) (first L) (triple (rest L))
