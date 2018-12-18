@@ -1,0 +1,7 @@
+#lang racket
+(define (dept A)
+  (if (leaf? A) 0
+      (if (has-R-subtree? A)
+          (+ 1 (max (dept (L-subtree A) (dept(R-subtree A)))))
+          (+ 1 (dept(L-subtree A)))
+         )))
