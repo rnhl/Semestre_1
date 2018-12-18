@@ -1,0 +1,28 @@
+#lang racket
+;; Exo 31 Listes
+(list 1)
+(cons 1 empty)
+
+(list 1 2 3)
+(cons 1 empty) (cons 2 empty) (cons 3 empty)
+
+
+;; Exo 32 Listes
+(list 1 (list))
+(cons 1 empty)
+
+(list 1 (list 2 3) 4)
+(cons 1 (cons (cons 2 (cons 3 empty)) (cons 4 empty)))
+
+(list 1 (list 2 (list 3)))
+(cons 1 (cons (cons 2 (cons (cons 3 empty) empty)) empty))
+
+
+;; Exo 37
+ (define (ch-premier n l)
+   (cons n (rest l)))
+
+(define (liste-entier n)
+  (cons 
+
+  
