@@ -1,0 +1,7 @@
+# Exercice 1 à faire :
+#créer un programme (enregistrer sous le nom "msg_votre_nom.perl") où l'on demande à l'utilisateur de #donner son nom
+#on créer deux messages : msg1 ("welcome 'NOM' to Perl's world") et msg2 ("pas le bon user 'NOM' !")
+#le msg1 s'affichera si le nom est = "larry" et le programme est terminé,
+#sinon msg2
+#l'utilisateur peut répéter l'essai jusqu'à 3 fois
+#si les trois fois le nom n'est pas correct, alors un msg3 s'affiche "au revoir !" et le programme est #terminé.
